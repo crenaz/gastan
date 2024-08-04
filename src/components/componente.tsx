@@ -29,7 +29,7 @@ export function Componente() {
     {
       id: 1,
       date: "2023-06-01",
-      amount: 45.99,
+      amount: 15.99,
       description: "Groceries",
       category: "Food",
     },
@@ -50,9 +50,9 @@ export function Componente() {
     {
       id: 4,
       date: "2023-06-15",
-      amount: 199.99,
-      description: "New Laptop",
-      category: "Electronics",
+      amount: 89.27,
+      description: "Diesel",
+      category: "Fuel",
     },
     {
       id: 5,
@@ -70,8 +70,8 @@ export function Componente() {
         return expenses.filter((expense) => expense.category === "Food")
       case "auto":
         return expenses.filter((expense) => expense.category === "Auto")
-      case "electronics":
-        return expenses.filter((expense) => expense.category === "Electronics")
+      case "fuel":
+        return expenses.filter((expense) => expense.category === "Fuel")
       default:
         return expenses
     }
@@ -79,28 +79,25 @@ export function Componente() {
   return (
     <div className="flex min-h-screen w-full bg-background">
       <aside className="hidden w-64 flex-col border-r bg-card p-6 md:flex">
-        <div className="mb-6 text-2xl font-bold">Expense Tracker</div>
+        <div className="mb-6 text-2xl font-bold">:👇:</div>
         <nav className="flex flex-col gap-2">
           <Button variant={activeFilter === "all" ? "secondary" : "ghost"} onClick={() => setActiveFilter("all")}>
-            All Expenses
+          ⚜️All Expenses
           </Button>
           <Button variant={activeFilter === "food" ? "secondary" : "ghost"} onClick={() => setActiveFilter("food")}>
-            Food
+            Food🥣
           </Button>
           <Button variant={activeFilter === "auto" ? "secondary" : "ghost"} onClick={() => setActiveFilter("auto")}>
-            Auto
+            Auto🚗
           </Button>
-          <Button
-            variant={activeFilter === "electronics" ? "secondary" : "ghost"}
-            onClick={() => setActiveFilter("electronics")}
-          >
-            Electronics
+          <Button variant={activeFilter === "fuel" ? "secondary" : "ghost"} onClick={() => setActiveFilter("fuel")}>
+            Fuel🛢️
           </Button>
         </nav>
       </aside>
       <main className="flex-1 p-6">
         <div className="mb-6 flex items-center justify-between">
-          <div className="text-2xl font-bold">Expense Tracker</div>
+          <div className="text-2xl font-bold">💵Expense💸Tracker💰</div>
           <Button>Add Expense</Button>
         </div>
         <div className="mb-6 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
