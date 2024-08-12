@@ -28,37 +28,37 @@ export function Componente() {
   const [expenses, setExpenses] = useState([
     {
       id: 1,
-      date: "2023-06-01",
-      amount: 15.99,
-      description: "Groceries",
-      category: "Food",
+      date: "2024-07-25",
+      amount: 20,
+      description: "Diesel",
+      category: "Fuel",
     },
     {
       id: 2,
-      date: "2023-06-05",
-      amount: 79.5,
-      description: "Car Repair",
-      category: "Auto",
+      date: "2024-08-02",
+      amount: 50,
+      description: "Diesel",
+      category: "Fuel",
     },
     {
       id: 3,
-      date: "2023-06-10",
-      amount: 25.0,
-      description: "Lunch Meeting",
+      date: "2024-08-03",
+      amount: 15,
+      description: "Lunch",
       category: "Food",
     },
     {
       id: 4,
-      date: "2023-06-15",
-      amount: 89.27,
+      date: "2024-08-05",
+      amount: 60,
       description: "Diesel",
       category: "Fuel",
     },
     {
       id: 5,
-      date: "2023-06-20",
-      amount: 12.75,
-      description: "Coffee",
+      date: "2024-08-05",
+      amount: 10,
+      description: "Coffee and snacks",
       category: "Food",
     },
   ])
@@ -68,10 +68,10 @@ export function Componente() {
     switch (activeFilter) {
       case "food":
         return expenses.filter((expense) => expense.category === "Food")
-      case "auto":
-        return expenses.filter((expense) => expense.category === "Auto")
       case "fuel":
         return expenses.filter((expense) => expense.category === "Fuel")
+      case "lyft":
+        return expenses.filter((expense) => expense.category === "Lyft")
       default:
         return expenses
     }
@@ -87,11 +87,11 @@ export function Componente() {
           <Button variant={activeFilter === "food" ? "secondary" : "ghost"} onClick={() => setActiveFilter("food")}>
             Food🥣
           </Button>
-          <Button variant={activeFilter === "auto" ? "secondary" : "ghost"} onClick={() => setActiveFilter("auto")}>
-            Auto🚗
-          </Button>
           <Button variant={activeFilter === "fuel" ? "secondary" : "ghost"} onClick={() => setActiveFilter("fuel")}>
             Fuel🛢️
+          </Button>
+          <Button variant={activeFilter === "lyft" ? "secondary" : "ghost"} onClick={() => setActiveFilter("lyft")}>
+          Lyft🚗
           </Button>
         </nav>
       </aside>
