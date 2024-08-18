@@ -28,38 +28,10 @@ export function Componente() {
   const [expenses, setExpenses] = useState([
     {
       id: 1,
-      date: "2024-07-25",
-      amount: 20,
-      description: "Diesel",
+      date: "2024-08-16",
+      amount: 250,
+      description: "Diesel for truck #4295",
       category: "Fuel",
-    },
-    {
-      id: 2,
-      date: "2024-08-02",
-      amount: 50,
-      description: "Diesel",
-      category: "Fuel",
-    },
-    {
-      id: 3,
-      date: "2024-08-03",
-      amount: 15,
-      description: "Lunch",
-      category: "Food",
-    },
-    {
-      id: 4,
-      date: "2024-08-05",
-      amount: 60,
-      description: "Diesel",
-      category: "Fuel",
-    },
-    {
-      id: 5,
-      date: "2024-08-05",
-      amount: 10,
-      description: "Coffee and snacks",
-      category: "Food",
     },
   ])
   const [totalExpenses, setTotalExpenses] = useState(expenses.reduce((total, expense) => total + expense.amount, 0))
