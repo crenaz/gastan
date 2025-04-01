@@ -67,7 +67,7 @@
     @apply bg-background text-foreground;
     background-color: #f3f4f6;  /* Light gray background */
     /* OR */
-    background: linear-gradient(to right, #6366f1, #a5b4fc);  /* Gradient background */
+    background: linear-gradient(to right, #060af7, #e94c6e);  /* Gradient background */
     /* OR */
     background-image: url('/your-image.jpg');  /* Image background */
     background-size: cover;
